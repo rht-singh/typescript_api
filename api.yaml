@@ -1,0 +1,42 @@
+swagger : '2.0'
+
+info : 
+  title : Api with Typescript
+  description : All Api made with the help of typescript and  express
+servers : 
+  -url : 'http://localhost:3000'
+  description :  localhost servers
+schemes : [http,https,MX,SSH,TCP,UDP]
+
+paths :
+  /api/get-posts : 
+    get : 
+      summary : Return data from api server
+      description : Return data from api server and filter typescript data
+      responses : 
+        200 : 
+          description : success
+          content : 
+            application/json:
+              schema : 
+                   type: array
+          
+  /api/get_post/{id} : 
+    get : 
+      parameters : 
+        - in : path 
+          name : id
+          required : true
+      summary : Return data from api server
+      description : Return data from api server and filter typescript
+      responses : 
+        200 : 
+          description : success
+          content : 
+            application/json :
+              schema : 
+                type : array
+                item :
+                  type : string
+
+                
